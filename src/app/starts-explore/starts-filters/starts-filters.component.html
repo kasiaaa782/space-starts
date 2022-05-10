@@ -1,0 +1,46 @@
+<section class="filters-container" [formGroup]="startSearchForm">
+  <div class="row">
+    <div class="col-12 col-md-6 col-xl-3 mb-3">
+      <label for="flightName">Nazwa lotu</label>
+      <input
+        class="form-control filters-property"
+        id="flightName"
+        placeholder="Wpisz nazwę"
+        formControlName="startName"
+      />
+    </div>
+    <div class="col-12 col-md-6 col-xl-3 mb-3">
+      <label for="flightDate">Data lotu</label>
+      <input
+        class="form-control filters-property"
+        id="flightDate"
+        placeholder="RRRR/MM/DD - RRRR/MM/DD"
+        formControlName="startDate"
+      />
+    </div>
+    <div class="col-12 col-md-6 col-xl-3 mb-3">
+      <div class="form-check filters-property--checkbox-content">
+        <input
+          class="form-check-input filters-property--checkbox"
+          type="checkbox"
+          value=""
+          id="isSuccessful"
+          formControlName="isSuccessfulFlight"
+        />
+        <label class="form-check-label" for="isSuccessful">
+          Pokaż tylko udane loty
+        </label>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-xl-3 mb-2">
+      <button
+        type="button"
+        class="btn btn-primary filters-property filters-property__button"
+        (click)="applyFilters()"
+      >
+        szukaj
+      </button>
+    </div>
+  </div>
+  <hr class="filters-line" />
+</section>
