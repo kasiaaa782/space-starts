@@ -12,9 +12,14 @@
     <div class="col-12 col-md-6 col-xl-3 mb-3">
       <label for="flightDate">Data lotu</label>
       <input
-        class="form-control filters-property"
-        id="flightDate"
         placeholder="RRRR/MM/DD - RRRR/MM/DD"
+        class="form-control filters-property"
+        bsDaterangepicker
+        [bsConfig]="{
+          rangeInputFormat: 'YYYY/MM/DD',
+          dateInputFormat: 'YYYY/MM/DD',
+          isAnimated: true
+        }"
         formControlName="startDate"
       />
     </div>
