@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-import { StartDetails } from 'src/shared/interfaces/interfaces';
+import {
+  StartDetails,
+  StartsFiltersRequest
+} from 'src/shared/interfaces/interfaces';
 import { StartsApiService } from 'src/shared/services/startsApi.service';
 
 @Component({
@@ -15,8 +18,12 @@ export class StartsExploreComponent implements OnInit {
 
   ngOnInit(): void {
     this.startsApiService.getStarsList().subscribe((data) => {
-      console.log(data);
       this.startsList = data;
+      console.log('TODO paginate, sort list');
     });
+  }
+
+  applyFilters(request: StartsFiltersRequest): void {
+    console.log('TODO filtration');
   }
 }

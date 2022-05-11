@@ -1,3 +1,8 @@
+export interface StartsFiltersRequest {
+  startName: string;
+  startDate: string;
+  isSuccessfulFlight: Boolean;
+}
 export interface StartDetails {
   fairings: boolean;
   links: {

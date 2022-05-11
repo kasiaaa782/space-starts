@@ -1,23 +1,35 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+
+import { StartsFiltersRequest } from 'src/shared/interfaces/interfaces';
 
 @Component({
   selector: 'app-starts-filters',
   templateUrl: './starts-filters.component.html',
   styleUrls: ['./starts-filters.component.scss']
 })
-export class StartsFiltersComponent implements OnInit {
+export class StartsFiltersComponent {
+  @Output() applyFiltersClicked = new EventEmitter();
+
   startSearchForm = new FormGroup({
     startName: new FormControl(''),
     startDate: new FormControl(''),
-    isSuccessfulFlight: new FormControl('')
+    isSuccessfulFlight: new FormControl(false)
   });
 
-  constructor() {}
-
-  ngOnInit(): void {}
+  request: StartsFiltersRequest = {
+    startName: '',
+    startDate: '',
+    isSuccessfulFlight: false
+  };
 
   applyFilters(): void {
-    console.log(this.startSearchForm);
+    let controls = this.startSearchForm.controls;
+    this.request = {
+      startName: controls['startName'].value,
+      startDate: controls['startDate'].value,
+      isSuccessfulFlight: controls['isSuccessfulFlight'].value
+    };
+    this.applyFiltersClicked.emit(this.request);
   }
 }
