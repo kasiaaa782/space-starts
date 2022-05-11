@@ -1,0 +1,85 @@
+@import '../../../styles.scss';
+
+.filters {
+  &-container {
+    width: 440px;
+    padding: 18px 0 14px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+      width: 100%;
+
+      .row {
+        width: $breakpoint-tablet;
+      }
+    }
+
+    @media screen and (min-width: $breakpoint-large) {
+      .row {
+        width: $breakpoint-large;
+      }
+    }
+  }
+
+  &-property {
+    height: 40px;
+    padding: 2px 2px 2px 20px;
+    font-size: 13px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+      width: 354px;
+      margin-bottom: 10px;
+    }
+
+    @media screen and (min-width: $breakpoint-large) {
+      width: 275px;
+    }
+
+    &--checkbox-content {
+      display: flex;
+      align-items: center;
+      margin: 6px 0;
+
+      @media screen and (min-width: $breakpoint-large) {
+        margin-top: 26px;
+      }
+    }
+
+    &--checkbox {
+      width: 24px;
+      height: 24px;
+      margin-right: 18px;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    &__button {
+      width: 100%;
+      background-color: rgba(48, 194, 213, 1);
+      padding: 0;
+      border: none;
+
+      @media screen and (min-width: $breakpoint-tablet) {
+        width: 354px;
+      }
+
+      @media screen and (min-width: $breakpoint-large) {
+        width: 275px;
+        margin-top: 20px;
+      }
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  &-line {
+    border: 1px solid $font-main-color;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+      margin: 0;
+    }
+  }
+}
