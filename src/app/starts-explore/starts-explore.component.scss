@@ -3,4 +3,16 @@
 .starts-container {
   display: flex;
   justify-content: center;
+
+  .starts-wrapper {
+    width: 440px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+      width: 720px;
+    }
+
+    @media screen and (min-width: $breakpoint-large) {
+      width: 1150px;
+    }
+  }
 }

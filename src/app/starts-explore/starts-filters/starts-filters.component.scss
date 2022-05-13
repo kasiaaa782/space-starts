@@ -2,37 +2,14 @@
 
 .filters {
   &-container {
-    width: 440px;
-    padding: 18px 0 14px;
-
-    @media screen and (min-width: $breakpoint-tablet) {
-      width: 100%;
-
-      .row {
-        width: $breakpoint-tablet;
-      }
-    }
-
-    @media screen and (min-width: $breakpoint-large) {
-      .row {
-        width: $breakpoint-large;
-      }
-    }
+    width: 100%;
+    padding: 18px 0 0;
   }
 
   &-property {
     height: 40px;
     padding: 2px 2px 2px 20px;
     font-size: 13px;
-
-    @media screen and (min-width: $breakpoint-tablet) {
-      width: 354px;
-      margin-bottom: 10px;
-    }
-
-    @media screen and (min-width: $breakpoint-large) {
-      width: 275px;
-    }
 
     &--checkbox-content {
       display: flex;
@@ -56,18 +33,18 @@
 
     &__button {
       width: 100%;
-      background-color: rgba(48, 194, 213, 1);
       padding: 0;
-      border: none;
-
-      @media screen and (min-width: $breakpoint-tablet) {
-        width: 354px;
-      }
+      border-color: rgba(48, 194, 213, 1);
+      background-color: rgba(48, 194, 213, 1);
 
       @media screen and (min-width: $breakpoint-large) {
-        width: 275px;
-        margin-top: 20px;
+        margin-top: 18px;
       }
+    }
+
+    .field-align {
+      display: flex;
+      align-items: center;
     }
 
     &:focus {

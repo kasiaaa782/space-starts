@@ -1,0 +1,13 @@
+@import '../../../styles.scss';
+
+.list-container {
+  padding: 8px 0;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    padding: 70px 0 20px;
+  }
+
+  @media screen and (min-width: $breakpoint-large) {
+    padding: 90px 0 20px;
+  }
+}

@@ -10,9 +10,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StartsExploreComponent } from './starts-explore/starts-explore.component';
 import { StartsFiltersComponent } from './starts-explore/starts-filters/starts-filters.component';
+import { StartsListComponent } from './starts-explore/starts-list/starts-list.component';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
-  declarations: [AppComponent, StartsExploreComponent, StartsFiltersComponent],
+  declarations: [
+    AppComponent,
+    StartsExploreComponent,
+    StartsFiltersComponent,
+    StartsListComponent
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
