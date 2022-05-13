@@ -1,0 +1,22 @@
+<div class="box-container">
+  <div class="box-img">
+    <ng-container *ngIf="startDetails.links.patch.small; else emptyImg">
+      <img class="box-img--properties" [src]="startDetails.links.patch.small" />
+    </ng-container>
+    <ng-template #emptyImg>Zdjęcie</ng-template>
+  </div>
+  <div class="box-details">
+    <div class="box-details--wrapper">
+      <div># {{ startDetails.flight_number }}</div>
+      <div class="box-details--name">{{ startDetails.name }}</div>
+      <div>{{ startDetails.date_utc | date: 'yyyy-MM-dd' }}</div>
+      <button
+        type="button"
+        class="btn box-details--button"
+        (click)="this.navigateToDetailsClicked.emit()"
+      >
+        więcej >
+      </button>
+    </div>
+  </div>
+</div>

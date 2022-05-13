@@ -10,9 +10,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StartsExploreComponent } from './starts-explore/starts-explore.component';
 import { StartsFiltersComponent } from './starts-explore/starts-filters/starts-filters.component';
+import { StartsListComponent } from './starts-explore/starts-list/starts-list.component';
+import { StartsDetailsComponent } from './starts-explore/starts-details/starts-details.component';
 
 @NgModule({
-  declarations: [AppComponent, StartsExploreComponent, StartsFiltersComponent],
+  declarations: [
+    AppComponent,
+    StartsExploreComponent,
+    StartsFiltersComponent,
+    StartsListComponent,
+    StartsDetailsComponent
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

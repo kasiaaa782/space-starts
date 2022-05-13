@@ -1,3 +1,8 @@
 <main class="starts-container">
-  <app-starts-filters></app-starts-filters>
+  <div class="starts-wrapper">
+    <app-starts-filters
+      (applyFiltersClicked)="applyFilters($event)"
+    ></app-starts-filters>
+    <app-starts-list></app-starts-list>
+  </div>
 </main>
