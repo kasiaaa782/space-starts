@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+
 import { StartDetails } from 'src/shared/interfaces/interfaces';
 
 @Component({
@@ -6,12 +7,8 @@ import { StartDetails } from 'src/shared/interfaces/interfaces';
   templateUrl: './start-box.component.html',
   styleUrls: ['./start-box.component.scss']
 })
-export class StartBoxComponent implements OnInit {
+export class StartBoxComponent {
   @Input() startDetails: StartDetails;
 
-  ngOnInit(): void {
-    console.log(this.startDetails);
-  }
-
-  navigateToDetails() {}
+  @Output() navigateToDetailsClicked = new EventEmitter();
 }

@@ -11,14 +11,15 @@ import { AppComponent } from './app.component';
 import { StartsExploreComponent } from './starts-explore/starts-explore.component';
 import { StartsFiltersComponent } from './starts-explore/starts-filters/starts-filters.component';
 import { StartsListComponent } from './starts-explore/starts-list/starts-list.component';
-import { DatePipe } from '@angular/common';
+import { StartsDetailsComponent } from './starts-explore/starts-details/starts-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StartsExploreComponent,
     StartsFiltersComponent,
-    StartsListComponent
+    StartsListComponent,
+    StartsDetailsComponent
   ],
   imports: [
     BrowserModule,
