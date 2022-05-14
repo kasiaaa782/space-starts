@@ -1,0 +1,43 @@
+@import '../../../styles.scss';
+
+.custom-line {
+  border: 1px solid $font-main-color;
+  margin: 0;
+
+  &__inside {
+    height: 100%;
+  }
+
+  &__under {
+    @media screen and (min-width: $breakpoint-tablet) {
+      border: 1px solid $background-color;
+    }
+  }
+}
+
+.details-header {
+  display: flex;
+  width: 100%;
+  padding: 8px 0;
+
+  .details-arrow {
+    cursor: pointer;
+    padding: 6px 26px 12px;
+
+    &--icon {
+      color: rgba(48, 194, 213, 1);
+      -webkit-text-stroke: 3px;
+    }
+  }
+
+  .details-title {
+    display: flex;
+    margin: 0 0 8px;
+
+    &--content {
+      padding: 14px 14px 10px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+}

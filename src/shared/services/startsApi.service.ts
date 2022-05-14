@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { catchError, map, Observable } from 'rxjs';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 import { StartDetails } from '../interfaces/interfaces';
 
@@ -14,5 +14,9 @@ export class StartsApiService {
 
   getStarsList(): Observable<StartDetails[]> {
     return this.http.get<StartDetails[]>(this.url);
+  }
+
+  getStartDetails(uuid: string): Observable<StartDetails> {
+    return this.http.get<StartDetails>(`${this.url}/${uuid}`);
   }
 }

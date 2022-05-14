@@ -11,7 +11,8 @@ import { AppComponent } from './app.component';
 import { StartsExploreComponent } from './starts-explore/starts-explore.component';
 import { StartsFiltersComponent } from './starts-explore/starts-filters/starts-filters.component';
 import { StartsListComponent } from './starts-explore/starts-list/starts-list.component';
-import { StartsDetailsComponent } from './starts-explore/starts-details/starts-details.component';
+import { StartsDetailsComponent } from './starts-details/starts-details.component';
+import { DetailsHeaderComponent } from './starts-details/details-header/details-header.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { StartsDetailsComponent } from './starts-explore/starts-details/starts-d
     StartsExploreComponent,
     StartsFiltersComponent,
     StartsListComponent,
-    StartsDetailsComponent
+    StartsDetailsComponent,
+    DetailsHeaderComponent
   ],
   imports: [
     BrowserModule,

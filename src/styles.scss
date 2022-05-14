@@ -4,6 +4,7 @@ $breakpoint-tablet: 768px;
 $breakpoint-phone: 480px;
 $font-main-color: #848383;
 $font-light-color: #b7b7b7;
+$background-color: rgba(249, 249, 249, 1);
 
 /* global styles */
 html {
@@ -12,10 +13,10 @@ html {
 }
 
 body {
-  font-family: Arial, 'Source Sans Pro', 'Trebuchet MS';
+  font-family: 'Arial', 'Source Sans Pro', 'Trebuchet MS';
   font-size: 14px;
   color: $font-main-color;
-  background-color: rgba(249, 249, 249, 1);
+  background-color: $background-color;
   margin: 0;
   padding: 0;
 }
