@@ -9,7 +9,7 @@
     <div class="box-details--wrapper">
       <div># {{ startDetails.flight_number }}</div>
       <div class="box-details--name">{{ startDetails.name }}</div>
-      <div>{{ startDetails.date_utc | date: DASH_FORMAT_DATE }}</div>
+      <div>{{ startDetails.date_utc | date: 'yyyy-MM-dd' }}</div>
       <button
         type="button"
         class="btn box-details--button"
