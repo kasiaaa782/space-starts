@@ -1,0 +1,45 @@
+<div class="row row--padding">
+  <div class="col-12 col-md-6">
+    <app-details-box>
+      <div>
+        Lot:
+        <strong>{{ startDetails.name }}</strong>
+      </div>
+      <div>
+        Data lotu:
+        <strong>{{ startDetails.date_local | date: DASH_FORMAT_DATE }}</strong>
+      </div>
+      <div>
+        Status:
+        <ng-container *ngIf="startDetails.success; else failure">
+          <strong>Udany</strong>
+        </ng-container>
+        <ng-template #failure>
+          <strong>Nieudany</strong>
+        </ng-template>
+      </div>
+    </app-details-box>
+  </div>
+  <div class="col-12 col-md-6">
+    <app-details-box>
+      <div>
+        Załoga:
+        <strong>{{ startDetails.crew.length }}</strong>
+      </div>
+      <div>
+        Rakieta:
+        <strong>{{ rocketName }}</strong>
+      </div>
+      <div>
+        Start:
+        <ng-container *ngIf="launchpad">
+          <strong>{{ launchpad.name }} {{ launchpad.locality }}</strong>
+        </ng-container>
+      </div>
+    </app-details-box>
+  </div>
+</div>
+
+<app-details-box *ngIf="startDetails.details">
+  {{ startDetails.details }}
+</app-details-box>
