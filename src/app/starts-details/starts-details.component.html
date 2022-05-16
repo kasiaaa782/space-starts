@@ -1,0 +1,10 @@
+<section class="details-container">
+  <div class="details-wrapper">
+    <ng-container *ngIf="startDetails">
+      <app-details-header
+        [flightNumber]="startDetails.flight_number"
+      ></app-details-header>
+      <app-details-content [startDetails]="startDetails"> </app-details-content>
+    </ng-container>
+  </div>
+</section>

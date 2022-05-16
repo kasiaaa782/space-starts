@@ -21,7 +21,6 @@ import { DetailsContentComponent } from './starts-details/details-content/detail
     StartsExploreComponent,
     StartsFiltersComponent,
     StartsListComponent,
-    StartsDetailsComponent
     StartsDetailsComponent,
     DetailsHeaderComponent,
     DetailsContentComponent

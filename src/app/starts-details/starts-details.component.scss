@@ -1,0 +1,19 @@
+@import '../../styles.scss';
+
+.details-container {
+  display: flex;
+  justify-content: center;
+
+  .details-wrapper {
+    padding: 24px 0;
+    width: 440px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+      width: 720px;
+    }
+
+    @media screen and (min-width: $breakpoint-large) {
+      width: 1150px;
+    }
+  }
+}
