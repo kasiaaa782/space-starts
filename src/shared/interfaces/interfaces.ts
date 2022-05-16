@@ -3,6 +3,16 @@ export interface StartsFiltersRequest {
   startDate: string;
   isSuccessfulFlight: Boolean;
 }
+
+export interface Rocket {
+  name: string;
+}
+
+export interface Launchpad {
+  name: string;
+  locality: string;
+}
+
 export interface StartDetails {
   fairings: boolean;
   links: {

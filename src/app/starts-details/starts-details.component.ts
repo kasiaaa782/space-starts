@@ -23,7 +23,6 @@ export class StartsDetailsComponent implements OnInit {
       this.startsApiService.getStartDetails(params['uuid']).subscribe({
         next: (data: StartDetails) => {
           this.startDetails = data;
-          console.log(data);
         },
         error: (error) => {
           console.error('wrong uuid', error),

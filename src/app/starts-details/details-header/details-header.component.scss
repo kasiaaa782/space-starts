@@ -7,12 +7,6 @@
   &__inside {
     height: 100%;
   }
-
-  &__under {
-    @media screen and (min-width: $breakpoint-tablet) {
-      border: 1px solid $background-color;
-    }
-  }
 }
 
 .details-header {

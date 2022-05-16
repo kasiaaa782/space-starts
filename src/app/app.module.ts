@@ -13,6 +13,7 @@ import { StartsFiltersComponent } from './starts-explore/starts-filters/starts-f
 import { StartsListComponent } from './starts-explore/starts-list/starts-list.component';
 import { StartsDetailsComponent } from './starts-details/starts-details.component';
 import { DetailsHeaderComponent } from './starts-details/details-header/details-header.component';
+import { DetailsContentComponent } from './starts-details/details-content/details-content.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DetailsHeaderComponent } from './starts-details/details-header/details-
     StartsFiltersComponent,
     StartsListComponent,
     StartsDetailsComponent,
-    DetailsHeaderComponent
+    DetailsHeaderComponent,
+    DetailsContentComponent
   ],
   imports: [
     BrowserModule,
